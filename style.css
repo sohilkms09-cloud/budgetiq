@@ -1,0 +1,172 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#312e81);
+
+    color:white;
+
+    min-height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:500px;
+
+    margin:auto;
+
+    padding-top:40px;
+
+    animation:fadeIn 1s ease;
+}
+
+h1{
+    text-align:center;
+    font-size:42px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#d1d5db;
+}
+
+.dashboard{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+
+    padding:20px;
+
+    border-radius:20px;
+
+    margin-top:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.balance-card{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+}
+
+.income-card{
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+}
+
+.expense-card{
+    background:linear-gradient(135deg,#dc2626,#ef4444);
+}
+
+.form-section{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    margin-top:20px;
+}
+
+input,select{
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    background:rgba(255,255,255,0.1);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+}
+
+input::placeholder{
+    color:#d1d5db;
+}
+
+button{
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#38bdf8,#2563eb);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.expense-item{
+    background:rgba(255,255,255,0.08);
+
+    padding:15px;
+
+    margin-top:10px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.delete-btn{
+    margin-left:10px;
+
+    background:red;
+
+    padding:5px 10px;
+
+    border-radius:5px;
+}
+
+#myChart{
+    max-width:300px;
+    max-height:300px;
+
+    margin:auto;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

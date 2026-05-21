@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetIQ</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💰 BudgetIQ</h1>
+    <p class="subtitle">Smart Budget & Expense Tracker</p>
+
+    <div class="dashboard">
+
+        <div class="card balance-card">
+            <h2>Balance</h2>
+            <h3 id="balance">₹0</h3>
+        </div>
+
+        <div class="card income-card">
+            <h2>Income</h2>
+            <h3 id="income-display">₹0</h3>
+        </div>
+
+        <div class="card expense-card">
+            <h2>Expenses</h2>
+            <h3 id="expense-display">₹0</h3>
+        </div>
+
+    </div>
+
+    <div class="form-section">
+
+        <input type="text" id="expense-name" placeholder="Transaction Name">
+
+        <input type="number" id="expense-amount" placeholder="Amount">
+
+        <select id="type">
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+        </select>
+
+        <select id="category">
+            <option value="🍔 Food">🍔 Food</option>
+            <option value="🚕 Travel">🚕 Travel</option>
+            <option value="🛒 Shopping">🛒 Shopping</option>
+            <option value="🎮 Entertainment">🎮 Entertainment</option>
+            <option value="💡 Bills">💡 Bills</option>
+        </select>
+
+        <button onclick="addExpense()">Add Transaction</button>
+
+    </div>
+
+    <div id="expense-list"></div>
+
+    <div class="card">
+        <h2>Analytics</h2>
+        <canvas id="myChart"></canvas>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
